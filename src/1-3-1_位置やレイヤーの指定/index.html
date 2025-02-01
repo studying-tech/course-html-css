@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float プロパティの例</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .container {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      .left-image {
+        float: left;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        width: 200px;
+        height: auto;
+      }
+
+      .right-image {
+        float: right;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        width: 200px;
+        height: auto;
+      }
+
+      .clearfix::after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Float プロパティの例</h1>
+
+    <div class="container clearfix">
+      <img src="https://via.placeholder.com/200x150" alt="左寄せ画像" class="left-image" />
+      <p>
+        この段落では、画像が左に配置されています。float: left
+        を使用することで、テキストが画像の右側に回り込んでいます。これは記事やブログの記事でよく使われるレイアウトの一つです。画像の周りにテキストを自然に配置することができ、読みやすさと視覚的な興味を両立させることができます。
+      </p>
+      <p>
+        長めの文章を入れることで、画像の下にもテキストが回り込む様子がわかります。float
+        プロパティは、このように要素を文書の流れから取り出し、他の要素が周りを回り込むようにする機能を持っています。
+      </p>
+    </div>
+
+    <div class="container clearfix">
+      <img src="https://via.placeholder.com/200x150" alt="右寄せ画像" class="right-image" />
+      <p>
+        この段落では、画像が右に配置されています。float: right
+        を使用することで、テキストが画像の左側に回り込んでいます。これもまた、ウェブデザインでよく見られるレイアウトの一つです。右寄せの画像は、左から右に読む言語では、テキストの最後に視線を導くのに効果的です。
+      </p>
+      <p>
+        float プロパティを使用する際は、要素の回り込みをクリアする必要が出てくることがあります。この例では、コンテナに
+        clearfix
+        クラスを適用することで、フロートの影響を解除しています。これにより、コンテナが適切な高さを維持できます。
+      </p>
+    </div>
+  </body>
+</html>

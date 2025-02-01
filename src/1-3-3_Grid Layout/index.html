@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="item subgrid-container">
+    <div class="subgrid-item">A</div>
+    <div class="subgrid-item">B</div>
+    <div class="subgrid-item">C</div>
+  </div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .subgrid-container {
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+</style>
